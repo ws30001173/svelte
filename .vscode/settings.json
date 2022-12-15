@@ -8,5 +8,9 @@
     "**/Thumbs.db": true,
     "**/.class": true
   },
+  "editor.formatOnSave": true,
+  "[css]": {
+    "editor.defaultFormatter": null
+  },
   "hide-files.files": []
 }

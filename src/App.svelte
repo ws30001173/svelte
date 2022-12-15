@@ -1,14 +1,11 @@
 <script>
-  export let name;
+  let name = 'Yoshi';
+  let beltColor = 'black';
 </script>
 
 <main>
   <h1>Morning {name}!</h1>
-  <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
-    how to build Svelte apps.
-  </p>
-  <p>Start from scratch~</p>
+  <p>{beltColor}</p> 
 </main>
 
 <style>
