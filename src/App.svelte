@@ -1,6 +1,6 @@
 <script>
   export let name;
-  let beltColor = 'black belt';
+  let beltColor = 'just getting started with the basics';
 
   const handleClick = () => {
     beltColor = 'orange belt';
@@ -10,9 +10,9 @@
 </script>
 
 <main>
-  <h1>Morning {name}!</h1>
+  <h1>Hello {name}!</h1>
   <p>{beltColor}</p> 
-  <button on:click={handleClick}>update belt color</button>
+  <button on:click={handleClick}>update above text</button>
 </main>
 
 <style>
