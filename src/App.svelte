@@ -10,7 +10,7 @@
 </script>
 
 <main>
-  <h1>Hello {name}!</h1>
+  <h1>Hello {name}~</h1>
   <p>{beltColor}</p> 
   <button on:click={handleClick}>update above text</button>
 </main>
