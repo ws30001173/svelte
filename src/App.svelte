@@ -6,7 +6,7 @@
     beltColor = 'orange belt';
   }
 
-  console.log("Hello");
+  console.log("Hello~");
 </script>
 
 <main>
