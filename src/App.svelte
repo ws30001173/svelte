@@ -14,13 +14,23 @@
   }
 
   let people = [
-    { name: 'yoshi', beltColor: 'black', age: 25, id:1 },
-    { name: 'mario', beltColor: 'red', age: 30, id: 2},
-    { name: 'luigi', beltColor: 'purple', age: 30, id:3}
+    { name: 'yoshi', beltColor: 'black', age: 25, skills: 'fighting', id:1 },
+    { name: 'mario', beltColor: 'red', age: 30, skills: 'swimming', id: 2},
+    { name: 'luigi', beltColor: 'purple', age: 30, skills: 'running', id:3}
   ];
 
   const handleClick = (id) => {
     people = people.filter((person) => person.id != id);
+  }
+
+  // event prameter
+  const addPerson = (e) => {
+    const person = e.detail;
+    people = [person, ...people];
+    console.log(e.detail);
+    console.log(people);
+
+    showModal = false;
   }
 
   let num = 20;
@@ -30,8 +40,10 @@
 <!-- <Modal message="Hey I am a prop value" isPromo=(true)/> -->
 <!-- event forwarding -->
 <!-- slot -->
+<!-- after clicking -->
 <Modal showModal={showModal} on:click={toggleModal}>
-  <AddPersonForm />
+  <!-- // listen to custom event -->
+  <AddPersonForm on:addPerson={addPerson}/>
 </Modal>
 
 
@@ -43,6 +55,7 @@
   <p>num less or equal than 10</p>
 {/if}
 <main>
+  <!-- // Clicking to open  -->
   <button on:click|once={toggleModal}>open modal</button>
   {#each people as person}
   <div>
@@ -51,6 +64,7 @@
       <p><strong>master ninja</strong></p>
     {/if}
     <p>{person.age} years old, {person.beltColor} belt</p>
+    <p>His skill is {person.skills}</p>
     <button on:click={handleClick(person.id)}>delete</button>
   </div>
   {:else}
