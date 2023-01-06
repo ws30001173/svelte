@@ -70,6 +70,7 @@
   {:else}
     <p>no people to show</p>
   {/each}
+
 </main>
 
 <!-- component specific style by using unique classes -->
